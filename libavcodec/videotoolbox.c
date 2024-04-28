@@ -1280,6 +1280,16 @@ int ff_videotoolbox_frame_params(AVCodecContext *avctx,
     return 0;
 }
 
+int av_videotoolbox_start(AVCodecContext *avctx)
+{
+    return videotoolbox_start(avctx);
+}
+
+void av_videotoolbox_stop(AVCodecContext *avctx)
+{
+    videotoolbox_stop(avctx);
+}
+
 const AVHWAccel ff_h263_videotoolbox_hwaccel = {
     .name           = "h263_videotoolbox",
     .type           = AVMEDIA_TYPE_VIDEO,

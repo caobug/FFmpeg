@@ -141,6 +141,20 @@ int av_videotoolbox_default_init2(AVCodecContext *avctx, AVVideotoolboxContext *
 attribute_deprecated
 void av_videotoolbox_default_free(AVCodecContext *avctx);
 
+/**
+ * Allow videotoolbox to be started externally
+ * 
+ * @param avctx the corresponding codec context
+ */
+int av_videotoolbox_start(AVCodecContext *avctx);
+
+/**
+ * Allow videotoolbox to be stopped externally
+ * 
+ * @param avctx the corresponding codec context
+ */
+void av_videotoolbox_stop(AVCodecContext *avctx);
+
 #endif /* FF_API_VT_HWACCEL_CONTEXT */
 
 /**
